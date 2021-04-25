@@ -66,10 +66,12 @@ alert("PLEASE ENTER ONLY NUMBERS ABOVE 4")
 })
 
 function check(caze, auto){
+if (play == "yes"){
 caze.style.background = "white"
 if (caze.className == "bomb") {
 Array.from(document.getElementsByClassName("bomb")).forEach(function(item){
 item.innerHTML = "X"
+play = "no"
 })
 }
 else {
@@ -122,15 +124,18 @@ strasser.push(caze)
 }
 }
 }
+}
 window.addEventListener("contextmenu", function(e){
 if (event.target.innerHTML != "P" && document.getElementsByTagName("div")[1].innerHTML > 0){
 document.getElementsByTagName("div")[1].innerHTML = parseInt(document.getElementsByTagName("div")[1].innerHTML) - 1
 event.target.innerHTML = "P"
 event.target.style.color = "red"
+event.target.style.background = "white";
 }
 else if(document.getElementsByTagName("div")[1].innerHTML > 0) {
 document.getElementsByTagName("div")[1].innerHTML = parseInt(document.getElementsByTagName("div")[1].innerHTML) + 1
 e.target.innerHTML = ""
+e.target.style.color = "gray"
 }
 }, true)
 </script>
