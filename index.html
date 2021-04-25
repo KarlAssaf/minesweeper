@@ -21,7 +21,6 @@ INPUT COLONS:<br>
 <input id="inp2" type="number"><br>
 PRESS ENTER
 </div>
-<
 <script>
 var play = "yes"
 var strasser = []
@@ -68,6 +67,7 @@ alert("PLEASE ENTER ONLY NUMBERS ABOVE 4")
 })
 
 function check(caze, auto){
+if (play == "yes") {
 caze.style.background = "white"
 if (caze.className == "bomb") {
 Array.from(document.getElementsByClassName("bomb")).forEach(function(item){
@@ -124,7 +124,7 @@ else if (caze.innerHTML == 0 && auto == "yes"){
 strasser.push(caze)
 }
 }
-}
+}}
 
 window.addEventListener("contextmenu", function(e){
 if (event.target.innerHTML != "P" && document.getElementsByTagName("div")[1].innerHTML > 0){
