@@ -68,7 +68,6 @@ alert("PLEASE ENTER ONLY NUMBERS ABOVE 4")
 })
 
 function check(caze, auto){
-if (play == "yes"){
 caze.style.background = "white"
 if (caze.className == "bomb") {
 Array.from(document.getElementsByClassName("bomb")).forEach(function(item){
@@ -126,7 +125,7 @@ strasser.push(caze)
 }
 }
 }
-}
+
 window.addEventListener("contextmenu", function(e){
 if (event.target.innerHTML != "P" && document.getElementsByTagName("div")[1].innerHTML > 0){
 document.getElementsByTagName("div")[1].innerHTML = parseInt(document.getElementsByTagName("div")[1].innerHTML) - 1
